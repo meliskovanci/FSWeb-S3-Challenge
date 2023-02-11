@@ -91,6 +91,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  
 }
 
 
@@ -106,26 +107,25 @@ text-align: center;
 color: white;
 }
 
-nav{
+nav .option{
     display: flex;
     justify-content: space-evenly;
-    
-    
+    color: white;
 }
 
-nav a {
+.option a {
     color: white;
 }
 
 .icon{
 text-align: center;
 color:white;
-font-size: 3rem;
+font-size: 3.5rem;
 
 }
 
 .icon i{
-   margin: 0 3rem;
+   margin: 0 2%;
 }
 
 /* spacers */
