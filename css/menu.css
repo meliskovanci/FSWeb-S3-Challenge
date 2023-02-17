@@ -153,33 +153,45 @@ font-size: 3.5rem;
     color:white
 }
 
-.menu h2 {
-    color: white;
-    text-align: center;
-  }
-  .menu h3 {
-    font-size: 3rem;
-  }
-  .menu-container {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
-  
+.container{
+  background-color: rgb(0, 4, 17, 0.8);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h3{
+  font-size: 40px;
+}
+
   .menu-section {
-    width: 350px;
-    margin: 10px;
+    width: 40%;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 5%;
+    margin-bottom: 2%;
+    text-align: left;
   }
   
-  .menuFlex {
-    display: flex;
-    justify-content: space-between;
+.menu-item div{
+  display: flex;
+  justify-content: space-between;
+}
+
+  .menu-item {
+    padding: 3% 0;
   }
   
-  .menu-section h4 {
-    font-size: 2rem;
+  h4 {
+    display: inline-block;
+    width: 90%;
+    font-size: 30px;
+  }
+
+  .menu-item h4:nth-child(2){
+    text-align: right;
+    width: 5%;
   }
   
   .menu-section p {
@@ -190,10 +202,11 @@ font-size: 3.5rem;
 footer {
     width: 100%;
     height: 100%;
-    padding-top: 2.5vh;
+    padding: 2.5vh;
     font-size: 3rem;
     color:white;
     background-color: rgb(0, 4, 17);
+    box-sizing: border-box;
 }
 
 footer a {
@@ -201,19 +214,23 @@ footer a {
   }
   .footer {
     display: flex;
-    justify-content: space-evenly;
-    gap: 10%;
+    justify-content: space-around;
+    box-sizing: border-box;
   }
   .footer nav {
     display: flex;
-    gap: 10px;
+    justify-content: space-evenly;
+    box-sizing: border-box;
   }
   .footer nav a{
     padding:0 40px;
+    box-sizing: border-box;
   }
   footer input,
   button {
-    font-size: 20px;
+    font-size: 15px;
+    width: 40%;
+    box-sizing: border-box;
   }
   footer p {
     text-align: end;
@@ -225,7 +242,7 @@ footer a {
 @media (max-width: 428px) {
     /* header section */
     .header-title {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
         text-align: center;
         font-size: 4rem;
@@ -243,9 +260,33 @@ footer a {
 
     /* menu */
     .menu {
-        background-image: none;
+      width: 100%;
+      background-image: none;
     }
-
+    .container{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      text-align: center;
+    }
+    .container h2{
+      border-bottom: 3% solid;
+      font-size: 20px;
+    }
+    .menu-section h3{
+      border: 1px solid white;
+    }
+    
+    
+    .menu-item {
+      flex-direction: column;
+      padding: 0 5px;
+      border-bottom: 5px;
+      
+    }
+    
+    
     /* footer section */
     footer {
         height: auto;
@@ -259,4 +300,8 @@ footer a {
       footer nav {
         flex-direction: column;
       }
-}
+      footer p {
+        font-size: 10px;
+      }
+
+    }

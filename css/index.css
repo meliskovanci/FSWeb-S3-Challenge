@@ -47,15 +47,13 @@ table {
 	border-spacing: 0;
 }
 
-* {
-    box-sizing: border-box;
-}
 
 html {
+    
     max-width: 1920px;
     min-width: 428px;
     width: 100%;
-    font-size: 62.5%;
+    font-size: 60%;
 }
 
 body {
@@ -93,8 +91,6 @@ header {
     background-repeat: no-repeat;
   
 }
-
-
 .container{
     text-align: center;
     background-color: rgb(0, 4, 17, 0.8);
@@ -120,12 +116,13 @@ nav .option{
 .icon{
 text-align: center;
 color:white;
-font-size: 3.5rem;
+
 
 }
 
 .icon i{
-   margin: 0 2%;
+   margin: 3rem;
+   font-size: 50px;
 }
 
 /* spacers */
@@ -160,7 +157,7 @@ font-size: 3.5rem;
   .gallery div {
     display: flex;
     justify-content: space-between;
-    width: 70vw;
+    width: 70%;
     flex-wrap: wrap;
     margin: 10px auto;
   }
@@ -205,10 +202,9 @@ font-size: 3.5rem;
     
 }
 
-
-
 /* contact us section */
 .contact {
+    
     text-align: center;
     background-image: url("../img/jumbo-restaurant.jpg");
     background-size: cover;
@@ -244,64 +240,85 @@ font-size: 3.5rem;
 .info {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    font-size: 10px;
     
 }
 
 .address {
-    width: 25%;
+    width: 20%;
     
 }
 
 .hours {
-    width: 25%;
+    width: 20%;
     padding-bottom: 2.5vh;
     
 }
 
 .contacts {
-    width: 25%;
+     width: 20%;
     
 }
 
 .contact div a{
+    
     color: white;
+}
+
+.contacts #email{
+    width: 10%;
+    font-size: 20px;
 }
 
 /* footer section */
 footer {
     width: 100%;
     height: 100%;
-    padding-top: 2.5vh;
-    font-size: 2rem;
+    padding: 2.5vh;
+    font-size: 3rem;
+    color:white;
     background-color: rgb(0, 4, 17);
+    box-sizing: border-box;
+    
+}
+
+footer a {
     color: white;
-}   
-  
-    footer a {
-        color: white;
-      }
-      .footer {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 10%;
-      }
-      .footer nav {
-        display: flex;
-        gap: 10px;
-      }
-      .footer nav a{
-        padding:0 40px;
-      }
-      footer input,
-      button {
-        font-size: 20px;
-      }
-      footer p {
-        text-align: end;
-        padding: 10px;
-        font-size: 2rem;
-      }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    
+    
+  }
+.footer div:first-child{
+    width: 30%;
+}
+.footer div:last-child{
+    width: 70%;
+}
+  .footer nav {
+    
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+  }
+  .footer nav a{
+    padding:0 10px;
+    box-sizing: border-box;
+  }
+  footer input,
+  button {
+    font-size: 15px;
+    width: 40%;
+    box-sizing: border-box;
+  }
+  footer p {
+    text-align: end;
+    padding: 10px;
+    font-size: 2rem;
+  }
 /* mobile media query */
 @media (max-width: 428px) {
     header nav {
@@ -316,20 +333,20 @@ footer {
 
     /* gallery section */
     .gallery {
+       
         height: auto;
-        height: 500vh;
-    text-align: center;
+       text-align: center;
     }
     
     .gallery div {
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
       }
       .gallery img {
-        width: 100vw;
-        height: 100vw;
-        margin: 3% auto;
+        width: 100%;
+        height: 100vh;
+        margin: 1% auto;
       }
     
     /* about us section */
@@ -369,24 +386,49 @@ footer {
     .contacts {
         width: 100%;
         padding-bottom: 2.5vh;
+       
+    }
+    .contact div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contacts #email{
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        
     }
 
+    
+    
     /* footer section */
     footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
-        text-align: center
+        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
-    footer .footer {
+    .footer {
         flex-direction: column;
         text-align: center;
       }
-      footer nav {
+      .footer nav {
         flex-direction: column;
+        text-align: center;
       }
+      .footer div:first-child{
+        width: 100%;
+      }
+
+      .footer div:last-child{
+        width: 100%;
+      }
+
       footer input {
         text-align: center;
-        margin-left: 10%;
+        margin: 10px;
       }
 }
